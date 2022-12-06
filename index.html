@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(images/wp4816769.webp);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            height: 100vh;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        .thesun{
+            background-image: url(images/alevs-angry-fire-and-the-sun-photos-7.png);
+            width: 183px;
+            height: 168px;
+            background-size: 100%;
+            margin: 200px auto;
+            
+            /* position: absolute;
+            left: 40%;
+            top: 45%; */
+        }
+        .ourplace{
+            background-image: url(images/earth_4k_stock_by_hameed_db5roja-fullview.png);
+            width: 600px;
+            height: 62px;
+            background-size: 8%;
+            position: relative;
+            left: 33%;
+             top: 49%;
+            background-repeat: no-repeat;
+            transition: 0.5s;
+        }
+        .igotmoon{
+            background-image: url(images/moon-png-image-purepng-transparent-png-image-22.png);
+            
+            background-size: 9%;
+            position: absolute;
+            left: -19%;
+            top: -12%;
+            width: 239px;
+            height: 62px;
+            transition: 0.5s;
+            background-repeat: no-repeat;
+            
+            background-position: left center;
+        }
+    </style>
+</head>
+<body>
+    <div class="ourplace" id="beriliy"> <div class="igotmoon" id="baiy"></div></div>
+    
+    <div class="undersun">
+    <div class="thesun">
+    </div>
+</div>
+    <script>
+let r=1;
+let x=1;
+
+
+document.addEventListener('mousemove', logKey);
+let earth = document.getElementById('beriliy')
+let moon = document.getElementById('baiy')
+
+function logKey(e){
+
+        x=e.screenX/70;
+      
+
+      console.log(e.screenX);
+
+
+
+}
+setInterval(()=>{
+
+    earth.style.transform = `rotate(${r=r+1+x}deg)`
+
+},50);
+
+setInterval(()=>{
+
+moon.style.transform = `rotate(${r=r+1+x}deg)`
+},50);
+
+        
+    </script>
+</body>
+</html>
